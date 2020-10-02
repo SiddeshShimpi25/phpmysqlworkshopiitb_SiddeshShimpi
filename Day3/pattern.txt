@@ -1,0 +1,14 @@
+<html>
+<body>
+<p></p>
+<form action="post.php" method="POST">
+Enter your name: <input type="text" name="name" placeholder="Enter name"><br>
+Subject 1 marks: <input type="number" min="0" max=100 name="S1" placeholder="Enter marks"><br>
+Subject 2 marks: <input type="number" min="0" max=100 name="S2" placeholder="Enter marks"><br>
+Subject 3 marks: <input type="number" min="0" max=100 name="S3" placeholder="Enter marks"><br>
+Subject 4 marks: <input type="number" min="0" max=100 name="S4" placeholder="Enter marks"><br>
+Subject 5 marks: <input type="number" min="0" max=100 name="S5" placeholder="Enter marks"><br>
+<input type="submit" value="Submit" name="b1"/>
+</form>
+</body>
+</html>
