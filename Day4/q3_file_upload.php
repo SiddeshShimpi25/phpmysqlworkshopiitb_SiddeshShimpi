@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<form action="q3_file_upload.php" method="POST" enctype="multipart/form-data" >
-Select a file:
-<input type="file" name="file"><br>
-<input type="submit" value="Upload" name="b1"/>
-</form>
-</body>
-</html>
 <?php
-if(isset($_POST['b1'])){
-    echo "FILE NAME: ".$_FILES["file"]["name"]."<br>";
-    echo "FILE TYPE: ".$_FILES["file"]["type"]."<br>";
-    echo "FILE SIZE: ".$_FILES["file"]["size"]." bytes <br>";
+error_reporting(0);
+$conn = mysqli_connect("localhost","root","","visitor_counter") or die(mysqli_connect_error());
+$extract = mysqli_query($conn,"SELECT * FROM counter where id=1");
+while($row=mysqli_fetch_assoc($extract)){
+    $count=$row['count']; //database already has count value as 0.
 }
+$new_count=$count+1;
+$extract = mysqli_query($conn,"UPDATE counter SET count=$new_count where id=1");
+echo "You have $new_count visitors";
 ?>
