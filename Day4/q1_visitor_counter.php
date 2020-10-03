@@ -5,6 +5,7 @@ $extract = mysqli_query($conn,"SELECT * FROM counter where id=1");
 while($row=mysqli_fetch_assoc($extract)){
     $count=$row['count']; //database already has count value as 0.
 }
-$extract = mysqli_query($conn,"UPDATE counter SET count=$count+1 where id=1");
-echo "You have $count visitors";
+$new_count=$count+1;
+$extract = mysqli_query($conn,"UPDATE counter SET count=$new_count where id=1");
+echo "You have $new_count visitors";
 ?>
