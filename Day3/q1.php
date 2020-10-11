@@ -14,9 +14,6 @@ Subject 5 marks: <input type="number" min="0" max=100 name="S5" placeholder="Ent
 </html>
 
 
-
-
-
 <?php
 error_reporting(0);
 $conn = mysqli_connect("localhost","root","","result") or die(mysqli_connect_error());
@@ -41,9 +38,5 @@ if(isset($_POST["b1"])){
     echo "Subject 5: ".$m5."<br>";
     echo "Total Marks Obtained: ".$tmo."<br>";
     echo "Percentage: ".$per."<br>";
-
-
-
 }
-
 ?>
